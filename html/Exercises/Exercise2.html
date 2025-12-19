@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Directory</title>
+</head>
+
+<body>
+    <center>
+        <h4>Employee Table</h4>
+        <table border="1" style="border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <caption>Company Employee Directory - 2024</caption>
+                </tr>
+                <tr>
+                    <th scope="col" aria-label="ID No" >ID</th>
+                    <th scope="col" aria-label="Photo">Photo</th>
+                    <th scope="col" aria-label="Name">Name</th>
+                    <th scope="col" aria-label="Department name">Department</th>
+                    <th scope="col" aria-label="Position">Position</th>
+                    <th scope="col" aria-label="Email">Email</th>
+                    <th scope="col" aria-label="Phone">Phone</th>
+                    <th scope="col" aria-label="Date">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-department="engineering" data-status="active">
+                    <td>E01</td>
+                    <td><img src="Passport photo.jpg"
+                            style="width: 60px; height: 80px; object-fit: cover; border: 1px solid #ddd; border-radius: 4px;"
+                            alt="John Doe"></td>
+                    <td>John Doe</td>
+                    <td>Engineering</td>
+                    <td>Senior Developer</td>
+                    <td><a href="mailto:john@company.com">john@company.com</a></td>
+                    <td><a href="tel:+919876543210">+91-98765-43210</a></td>
+                    <td><time datetime="2022-07-14">Jul 14, 2022</time></td>
+                </tr>
+
+                <tr data-department="DevOps" data-status="active">
+                    <td>E02</td>
+                    <td><img src="..." alt="Sai Kumar"></td>
+                    <td>Sai Kumar</td>
+                    <td>DevOps</td>
+                    <td>Senior Developer</td>
+                    <td><a href="mailto:sai@gmail.com">sai@gmail.com</a></td>
+                    <td><a href="tel:+919812345670">+91-98123-45670</a></td>
+                    <td><time datetime="2023-04-10">Apr 10, 2023</time></td>
+                </tr>
+
+                <tr data-department="Java" data-status="active">
+                    <td>E03</td>
+                    <td><img src="..." alt="Ankit Sharma"></td>
+                    <td>Ankit Sharma</td>
+                    <td>Java</td>
+                    <td>Associate Developer</td>
+                    <td><a href="mailto:ankit@gmail.com">ankit@gmail.com</a></td>
+                    <td><a href="tel:+918765432190">+91-87654-32190</a></td>
+                    <td><time datetime="2021-09-22">Sep 22, 2021</time></td>
+                </tr>
+
+                <tr data-department="Data Science" data-status="active">
+                    <td>E04</td>
+                    <td><img src="..." alt="Devarshi Patel"></td>
+                    <td>Devarshi Patel</td>
+                    <td>Data Science</td>
+                    <td>Junior Developer</td>
+                    <td><a href="mailto:devarshi@gmail.com">devarshi@gmail.com</a></td>
+                    <td><a href="tel:+917912345680">+91-79123-45680</a></td>
+                    <td><time datetime="2022-11-05">Nov 5, 2022</time></td>
+                </tr>
+
+                <tr data-department="Cloud Engineering" data-status="active">
+                    <td>E5</td>
+                    <td><img src="..." alt="Shiva Reddy"></td>
+                    <td>Shiva Reddy</td>
+                    <td>Cloud Engineering</td>
+                    <td>Intern</td>
+                    <td><a href="mailto:shiva@gmail.com">shiva@gmail.com</a></td>
+                    <td><a href="tel:+919876543210">+91-98765-43210</a></td>
+                    <td><time datetime="2024-02-17">Feb 17, 2024</time></td>
+                </tr>
+
+                <tr data-department="Machine Learning" data-status="active">
+                    <td>E06</td>
+                    <td><img src="..." alt="Dharmik Joshi"></td>
+                    <td>Dharmik Joshi</td>
+                    <td>Machine Learning</td>
+                    <td>Associate Developer</td>
+                    <td><a href="mailto:dharmik@gmail.com">dharmik@gmail.com</a></td>
+                    <td><a href="tel:+918934567210">+91-89345-67210</a></td>
+                    <td><time datetime="2023-06-08">Jun 8, 2023</time></td>
+                </tr>
+
+                <tr data-department="Backend" data-status="active">
+                    <td>E07</td>
+                    <td><img src="..." alt="Avinash Rao"></td>
+                    <td>Avinash Rao</td>
+                    <td>Backend</td>
+                    <td>Senior Developer</td>
+                    <td><a href="mailto:avinash@gmail.com">avinash@gmail.com</a></td>
+                    <td><a href="tel:+917865432190">+91-78654-32190</a></td>
+                    <td><time datetime="2022-08-19">Aug 19, 2022</time></td>
+                </tr>
+
+                <tr data-department="Data Engineering" data-status="active">
+                    <td>E08</td>
+                    <td><img src="..." alt="Sai Teja"></td>
+                    <td>Sai Teja</td>
+                    <td>Data Engineering</td>
+                    <td>Junior Developer</td>
+                    <td><a href="mailto:sai.teja@gmail.com">sai.teja@gmail.com</a></td>
+                    <td><a href="tel:+919012345678">+91-90123-45678</a></td>
+                    <td><time datetime="2024-09-25">Sep 25, 2024</time></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="3">Total Employees: 8</th>
+                    <th colspan="5">
+                        Departments:<br>
+                        DevOps: 1 | Java: 1 | Data Science: 1 | Cloud: 1 | ML: 1 | Backend: 1 | Data Eng: 2
+                    </th>
+                </tr>
+            </tfoot>
+
+        </table>
+    </center>
+</body>
+
+</html>

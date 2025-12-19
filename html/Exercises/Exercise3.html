@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Satisfaction Survey</title>
+
+<body>
+    <form method="post" action="#">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required min="2" max="10"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            <label for="gender">Select your gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">-- Please select --</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="prefer-not">Prefer not to say</option>
+            </select><br><br>
+            <label for="Age">Age Range:</label>
+            <select id="Age" name="Age" required>
+                <option value="">-- Please select --</option>
+                <option value="Under 18">Under 18</option>
+                <option value="18-24">18-24</option>
+                <option value="25-34">25-34</option>
+                <option value="35-44">35-44</option>
+                <option value="45-54">45-54</option>
+                <option value="55+">55+</option>
+            </select>
+        </fieldset>
+    </form><br>
+
+    <form>
+        <fieldset>
+            <legend> Product Feedback</legend>
+            <label for="Products Used">Products Used :</label><br>
+            <div>
+                <label><input type="checkbox" name="products" value="Web Application">Web Application</label>
+                <label><input type="checkbox" name="products" value="Mobile App">Mobile App</label>
+                <label><input type="checkbox" name="products" value="Desktop Software">Desktop Software</label>
+                <label><input type="checkbox" name="products" value="API Services">API Services</label>
+                <label><input type="checkbox" name="products" value="Cloud Storage">Cloud Storage</label>
+            </div><br>
+            
+            <label for="primaryProduct">Primary Product:</label>
+            <select id="primaryProduct" name="primaryProduct" required>
+                <option value="">Select primary product</option>
+                <option value="Web Application">Web Application</option>
+                <option value="Mobile App">Mobile App</option>
+                <option value="Desktop Software">Desktop Software</option>
+                <option value="API Services">API Services</option>
+                <option value="Cloud Storage">Cloud Storage</option>
+            </select><br><br>
+
+                        <label for="customerTenure">How long have you been a customer?</label>
+            <select id="customerTenure" name="customerTenure" required>
+                <option value="">Select duration</option>
+                <option value="less1month">Less than 1 month</option>
+                <option value="1-6months">1-6 months</option>
+                <option value="6-12months">6-12 months</option>
+                <option value="1-2years">1-2 years</option>
+                <option value="more2years">More than 2 years</option>
+            </select>
+        </fieldset>
+    </form>
+<form>
+    <fieldset>
+        <legend>Satisfaction Rating</legend>
+        <label>Overall Satisfaction:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="overallSatisfaction" value="1" required> ★☆☆☆☆ (1)</label>
+                <label><input type="radio" name="overallSatisfaction" value="2"> ★★☆☆☆ (2)</label>
+                <label><input type="radio" name="overallSatisfaction" value="3"> ★★★☆☆ (3)</label>
+                <label><input type="radio" name="overallSatisfaction" value="4"> ★★★★☆ (4)</label>
+                <label><input type="radio" name="overallSatisfaction" value="5"> ★★★★★ (5)</label>
+            </div>
+        
+
+    </fieldset>
+</form>
+</body>
+
+</html>
