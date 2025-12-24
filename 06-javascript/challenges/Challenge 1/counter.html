@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        #decrement-btn {
+            color: red;
+            padding: 1.5rem 3rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 10px;
+            background: #f1e5e5;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(225, 10, 10, 0.2);
+            min-width: 120px;
+            margin: 0.5rem;
+        }
+
+        #decrement-btn:hover {
+            color: rgb(147, 8, 40);
+            background: #de5d3a;
+        }
+
+        #increment-btn {
+            color: green;
+            padding: 1.5rem 3rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-radius: 10px;
+            border: none;
+            background: #f1e5e5;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(6, 214, 103, 0.2);
+            min-width: 120px;
+            margin: 0.5rem;
+        }
+
+        #increment-btn:hover {
+            color: rgb(6, 249, 62);
+            background: #42d92a;
+        }
+
+        #reset-btn {
+            color: green;
+            padding: 1.5rem 3rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-radius: 5px;
+            border: none;
+            background: #f1e5e5;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(52, 3, 3, 0.2);
+            min-width: 120px;
+            margin: 0.5rem;
+        }
+
+        #reset-btn:hover {
+            color: rgb(0, 3, 1);
+        }
+
+        .span- {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .step-control {
+            margin-top: 1rem;
+        }
+
+        .step-input {
+            width: 90px;
+            font-size: 6rem;
+            padding: 1rem;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div align="center">
+        <div>
+            <h1>Counter</h1>
+            <button id="decrement-btn" class="#decrement-btn">Decrement</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span id="count" class="span-">0</span> &nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="increment-btn" class="#increment-btn">Increment</button>
+        </div><br>
+        <div>
+            <button type="reset" class="reset-btn" id="reset-btn">Reset</button>
+        </div><br>
+        <div class="step-control">
+            <label for="step-input">STEP : </label>
+            <input type="number" id="step-input" value="1" min="1">
+        </div>
+
+        <script src="counter.js"></script>
+    </div>
+</body>
+</html>
