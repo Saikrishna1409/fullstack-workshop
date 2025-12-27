@@ -1,0 +1,91 @@
+<!-- dom-events.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events Exercise</title>
+    <style>
+        .hidden { display: none; }
+        .error { color: red; font-size: 0.9em; }
+        .invalid { border-color: red; }
+        .active { color: blue; font-weight: bold; }
+        #counter { text-align: center; margin: 20px; }
+        button { padding: 10px 20px; margin: 0 10px; }
+        .product-card { border: 1px solid #ccc; padding: 20px; margin: 20px; max-width: 300px; }
+        .card { border: 1px solid #ddd; padding: 15px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <!-- Part 1 HTML Structure -->
+    <div id="app">
+        <header class="header">
+            <h1>My App</h1>
+            <nav>
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <article class="card" data-id="1">
+                <h2>Card Title</h2>
+                <p>Card content here</p>
+            </article>
+            <article class="card" data-id="2">
+                <h2>Another Card</h2>
+                <p>More content</p>
+            </article>
+        </main>
+    </div>
+
+    <!-- Part 2 Elements -->
+    <div id="box" class="container">Hello</div>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <!-- Part 3 Elements -->
+    <button id="btn">Click Me</button>
+
+    <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search...">
+        <button type="submit">Search</button>
+    </form>
+
+    <ul id="todo-list">
+        <li><span>Task 1</span> <button class="delete">X</button></li>
+        <li><span>Task 2</span> <button class="delete">X</button></li>
+    </ul>
+
+    <div id="modal" class="hidden">Modal Content</div>
+
+    <!-- Part 4 Practical Exercises -->
+    <div id="counter">
+        <button id="decrement">-</button>
+        <span id="count">0</span>
+        <button id="increment">+</button>
+    </div>
+
+    <button id="toggle-btn">Show Details</button>
+    <div id="details" class="hidden">
+        <p>These are the hidden details.</p>
+    </div>
+
+    <form id="signup-form">
+        <div>
+            <input type="text" id="username" placeholder="Username">
+            <span class="error" id="username-error"></span>
+        </div>
+        <div>
+            <input type="email" id="email" placeholder="Email">
+            <span class="error" id="email-error"></span>
+        </div>
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <script src="dom-events.js"></script>
+</body>
+</html>
