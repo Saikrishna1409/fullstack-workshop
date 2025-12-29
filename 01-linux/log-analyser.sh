@@ -3,7 +3,7 @@ set -e
 set -u
 set -o pipefail
 
-LOG_FILE="sample-log.txt"
+LOG_FILE="01-linux/sample-log.txt"
 if [ ! -f "$LOG_FILE" ]; then
   echo "Error: File '$LOG_FILE' does not exist."
   exit 1
