@@ -1,3 +1,7 @@
+#!/bin/bash
+set -e
+set -u
+set -o pipefail
 
 THRESHOLD=${1:-90}
 ALERT=0
