@@ -17,6 +17,6 @@ const initialize = once(() => {
     return 'Initialized';
 });
 
-console.log(initialize()); // "Initializing..." then "Initialized"
-console.log(initialize()); // Just "Initialized" (no log, cached result)
+console.log(initialize()); // "Initializing...
+console.log(initialize()); // Just "Initialized"
 console.log(initialize()); // Just "Initialized"

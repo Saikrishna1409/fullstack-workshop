@@ -6,7 +6,7 @@ const curry = (fn) => (arg, ...restArgs) =>
 const add = (a, b, c) => a + b + c;
 const curriedAdd = curry(add);
 
-console.log(curriedAdd(1)(2)(3));     // 6
-console.log(curriedAdd(1, 2)(3));     // 6
-console.log(curriedAdd(1)(2, 3));     // 6
-console.log(curriedAdd(1, 2, 3));     // 6
+console.log(curriedAdd(1)(2)(3));    
+console.log(curriedAdd(1, 2)(3));     
+console.log(curriedAdd(1)(2, 3));     
+console.log(curriedAdd(1, 2, 3));

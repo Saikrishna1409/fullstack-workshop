@@ -41,14 +41,14 @@ function createPerson(name, age) {
 }
 
 const person = createPerson('Sai', 23);
-console.log(person.getName());     // "John"
-console.log(person.getAge());      // 23
+console.log(person.getName());     
+console.log(person.getAge());      
 person.birthday();
-console.log(person.getAge());      // 24
-person.setAge(200);                // Should fail validation
-console.log(person.getAge());      // Still 24
+console.log(person.getAge());      
+person.setAge(200);                
+console.log(person.getAge());      
 person.setAge(30);
-console.log(person.getAge());      // 30
-console.log(person.introduce());   // "Hi, I'm Sai and I'm 30 years old."
-console.log(person.name);          // undefined (private)
-console.log(person.age);           // undefined (private)
+console.log(person.getAge());      
+console.log(person.introduce());   
+console.log(person.name);          
+console.log(person.age);

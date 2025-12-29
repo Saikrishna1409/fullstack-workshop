@@ -17,7 +17,7 @@ const expensiveOperation = (n) => {
 };
 
 const memoizedOperation = memoize(expensiveOperation);
-console.log(memoizedOperation(5));  // Computes
-console.log(memoizedOperation(5));  // Cached
-console.log(memoizedOperation(10)); // Computes
-console.log(memoizedOperation(10)); // Cached
+console.log(memoizedOperation(5));  
+console.log(memoizedOperation(5));  
+console.log(memoizedOperation(10)); 
+console.log(memoizedOperation(10)); 

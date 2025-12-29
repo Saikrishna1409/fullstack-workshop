@@ -1,30 +1,34 @@
 // DOM Elements
 const decrementBtn = document.getElementById('decrement-btn');
 const incrementBtn = document.getElementById('increment-btn');
-const resetbtn = document.getElementById('reset-btn');
+const resetBtn = document.getElementById('reset-btn');
 const count = document.getElementById('count');
-const stepinput = document.querySelectorAll('step-input');
+let currentStep = 1; // Track selected step value
 
-// Initialize counter
+
 document.addEventListener('DOMContentLoaded', () => {
     loadCount();
     updateDisplay();
+    setStep(1); // Default step selection
 });
 
+// Step button handlers (from your HTML buttons)
+function setStep(value) {
+    currentStep = value;
+    // Visual feedback for buttons
+    document.querySelectorAll('.step-btn').forEach(btn => {
+        btn.classList.toggle('selected', parseInt(btn.value) === value);
+    });
+}
+
 // Event Listeners
-decrementBtn.addEventListener('click', () => {
-    const step = parseInt(document.getElementById('step-input').value) || 1;
-    decrement(step);
-});
-incrementBtn.addEventListener('click', () => {
-    const step = parseInt(document.getElementById('step-input').value) || 1;
-    increment(step);
-});
-resetbtn.addEventListener('click', () => {
-    reset();
-});
+decrementBtn.addEventListener('click', () => decrement(currentStep));
+incrementBtn.addEventListener('click', () => increment(currentStep));
+resetBtn.addEventListener('click', () => reset());
+
 // Counter Logic
 let currentCount = 0;
+
 const loadCount = () => {
     const savedCount = localStorage.getItem('counterValue');
     currentCount = savedCount ? parseInt(savedCount) : 0;
@@ -33,26 +37,24 @@ const loadCount = () => {
 const saveCount = () => {
     localStorage.setItem('counterValue', currentCount);
 };
+
 const updateDisplay = () => {
     count.textContent = currentCount;
-    let currentcolor;
-    if (currentCount > 1) {
-        currentcolor = 'green';
-    } else {
-        currentcolor = 'black';
-    }
-    count.style.color = currentcolor;
+    count.style.color = currentCount > 1 ? 'green' : 'black';
 };
+
 const decrement = (step) => {
     currentCount = Math.max(0, currentCount - step);
     saveCount();
     updateDisplay();
 };
+
 const increment = (step) => {
     currentCount += step;
     saveCount();
     updateDisplay();
 };
+
 const reset = () => {
     currentCount = 0;
     saveCount();

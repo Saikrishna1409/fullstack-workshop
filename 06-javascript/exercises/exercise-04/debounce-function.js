@@ -12,6 +12,6 @@ const handleSearch = debounce((query) => {
 }, 300);
 
 
-handleSearch('a'); // ignored
-handleSearch('ab'); // ignored  
-handleSearch('abc'); // executes after 300ms
+handleSearch('a');
+handleSearch('ab');   
+handleSearch('abc');

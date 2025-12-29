@@ -4,7 +4,7 @@ function createPipeline(...operations) {
     };
 }
 
-// Sample products data
+
 const products = [
     { name: 'Blender', price: 99, inStock: true },
     { name: 'Headphones', price: 149, inStock: true },
@@ -14,13 +14,11 @@ const products = [
     { name: 'Keyboard', price: 89, inStock: false }
 ];
 
-// Create operations
 const filterInStock = products => products.filter(p => p.inStock);
 const sortByPrice = products => [...products].sort((a, b) => a.price - b.price);
 const getNames = products => products.map(p => p.name);
 const takeFirst = n => items => items.slice(0, n);
 
-// Create pipeline
 const getTopCheapestInStock = createPipeline(
     filterInStock,
     sortByPrice,
@@ -29,4 +27,3 @@ const getTopCheapestInStock = createPipeline(
 );
 
 console.log(getTopCheapestInStock(products));
-//['Bookshelf', 'Mouse', 'Blender'] (3 cheapest in-stock items)

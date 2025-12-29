@@ -6,4 +6,4 @@ const double = x => x * 2;
 const square = x => x * x;
 
 const composed = compose(addOne, double, square);
-console.log(composed(3)); // 19
+console.log(composed(3));
