@@ -1,5 +1,7 @@
 #!/bin/bash
-
+set -e
+set -u
+set -o pipefail
 DIR=$1
 
 if [ -z "$DIR" ] || [ ! -d "$DIR" ]; then
