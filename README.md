@@ -1,2 +1,2 @@
 # fullstack-workshop
-My assignments and exercises.
+Challenges and exercises.
