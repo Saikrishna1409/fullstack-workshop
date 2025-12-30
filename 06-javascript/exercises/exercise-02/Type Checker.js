@@ -1,10 +1,16 @@
-function getType(value) {
+const getType = (value) => {
     if (value === null) return "null";
     if (Array.isArray(value)) return "array";
-    if (typeof value === "object") return "object";
-    return typeof value;
-}
+    return typeof value === "object" ? "object" : typeof value;
+};
 
-console.log(getType(42)); 
-console.log(getType("Hello"));
-console.log(getType(true));
+const testCases = [
+    { value: 42, expected: "number" },
+    { value: "Hello", expected: "string" },
+    { value: true, expected: "boolean" }
+];
+
+testCases.forEach(({ value, expected }) => {
+    const result = getType(value);
+    console.log(`getType(${JSON.stringify(value)}) = "${result}" ${result === expected ? '✅' : '❌'}`);
+});
