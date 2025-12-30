@@ -1,16 +1,16 @@
-let score = 0;
+const questions = [
+    { question: 'What is 5 + 3?', expected: '8' },
+    { question: 'What is the capital of France?', expected: 'paris' },
+    { question: 'What color is the sky?', expected: 'blue' }
+];
 
-let answer1 = prompt('What is 5 + 3?');
-if (answer1 == '8') {
-    score++;
-};
-let answer2 = prompt('What is the capital of France?');
-if (answer2.toLowerCase() == 'paris') {
-    score++;
-}
-let answer3 = prompt('What color is the sky?');
-if (answer3.toLowerCase() == 'blue') {
-    score++;
-}
+const checkAnswer = (answer, expected) => 
+    answer.toLowerCase().trim() === expected.toLowerCase().trim();
+
+let score = questions
+    .map(q => prompt(q.question))
+    .filter((answer, i) => checkAnswer(answer, questions[i].expected))
+    .length;
+
 console.log(`Your final score is ${score} out of 3`);
 alert(`Your final score is ${score} out of 3`);
