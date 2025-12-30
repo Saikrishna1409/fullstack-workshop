@@ -1,4 +1,4 @@
-let original = {
+const original = {
     name: 'John',
     address: {
         city: 'New York',
@@ -7,29 +7,23 @@ let original = {
     hobbies: ['reading', 'gaming']
 };
 
-function deepClone(obj) {
+const deepClone = (obj) => {
     if (typeof structuredClone !== 'undefined') {
         return structuredClone(obj);
     }
-    
 
     if (obj === null || typeof obj !== 'object') return obj;
-    if (Array.isArray(obj)) {
-        return obj.map(deepClone);
-    }
     
-    const clone = {};
-    for (let key in obj) {
-        if (obj.hasOwnProperty(key)) {
-            clone[key] = deepClone(obj[key]);
-        }
-    }
-    return clone;
-}
+    return Array.isArray(obj) 
+        ? obj.map(deepClone)
+        : Object.fromEntries(
+            Object.entries(obj).map(([key, value]) => [key, deepClone(value)])
+          );
+};
 
-let cloned = deepClone(original);
+const cloned = deepClone(original);
 cloned.address.city = 'Boston';
 cloned.hobbies.push('swimming');
 
-console.log(original.address.city);
-console.log(original.hobbies); 
+console.log(`Original city: ${original.address.city}`);
+console.log(`Original hobbies: ${original.hobbies.join(', ')}`);
