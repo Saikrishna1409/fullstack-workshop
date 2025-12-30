@@ -1,40 +1,30 @@
-function validatePassword(password) {
-    let validating={isValid: true,errors:[]}
+const validatePassword = (password) => {
+    const errors = [];
+    
+    if (password.length < 8) errors.push('Too short');
+    
+    const hasUpper = password.match(/[A-Z]/);
+    if (!hasUpper) errors.push('Missing Uppercase');
+    
+    const hasLower = password.match(/[a-z]/);
+    if (!hasLower) errors.push('Missing lowercase');
+    
+    const hasSpecial = password.match(/[!@#$%^&*]/);
+    if (!hasSpecial) errors.push('Missing special character');
+    
+    return {
+        isValid: errors.length === 0,
+        errors
+    };
+};
 
-    if(password.length<8) {
-        validating.isValid=false;
-        validating.errors.push('Too short')
-    }
-     let count=0;
-    for(let c of password){
-        if(c>='A' && c<='Z'){
-            count++;
-        }
-    }
-    if(count==0){
-         validating.isValid=false;
-        validating.errors.push('Missing Uppercase')
-    }
-    count=0;
-    for(let c of password){
-        if(c>='a' && c<='z'){
-            count++;
-        }
-    }
-    if(count==0){
-         validating.isValid=false;
-        validating.errors.push('Missing lowercase')
-    }
+const tests = [
+    { password: 'Abc123!@', expected: true },
+    { password: 'abc', expected: false }
+];
 
-    const specials = "!@#$%^&*";
-    count=0;
-
-    for (let char of password) {
-        if (specials.includes(char)) {
-          count++;
-        }
-    }
-return validating;
-}
-console.log(validatePassword('Abc123!@'));
-console.log(validatePassword('abc'));
+tests.forEach(({ password, expected }, i) => {
+    const result = validatePassword(password);
+    const status = result.isValid === expected ? '✅' : '❌';
+    console.log(`Test ${i + 1}: "${password}" → ${status} ${result.isValid ? 'Valid' : `Errors: [${result.errors.join(', ')}]`}`);
+});
