@@ -1,15 +1,52 @@
 # Review: 09-mysql
 
 **Exercise:**  Exercise: E-Commerce Database Design and Queries
-**Review Date:** 2025-12-30 15:25
+**Review Date:** 2025-12-31 09:36
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 1
+**Files submitted:** 4
 
 ### Code Review
+
+📄 **department-stats.sql**
+   Path: `09-mysql/challenges/department-stats.sql`
+   Lines: 8
+
+    - ✅ Contains 1 SELECT statement(s)
+    - 💡 Consider using JOINs for related data
+    - ✅ Uses aggregate functions
+    - ✅ Uses GROUP BY for aggregation
+    - ✅ Uses explicit column selection
+
+   **Score: 4/5**
+
+📄 **employee-hierarchy.sql**
+   Path: `09-mysql/challenges/employee-hierarchy.sql`
+   Lines: 6
+
+    - ✅ Contains 1 SELECT statement(s)
+    - ✅ Uses JOIN operations
+    - 💡 Consider using aggregate functions (COUNT, SUM, etc.)
+    - ✅ Uses explicit column selection
+
+   **Score: 3/5**
+
+📄 **project-workload.sql**
+   Path: `09-mysql/challenges/project-workload.sql`
+   Lines: 9
+
+    - ✅ Contains 1 SELECT statement(s)
+    - ✅ Uses JOIN operations
+    - ✅ Uses aggregate functions
+    - ✅ Uses GROUP BY for aggregation
+    - ✅ Uses explicit column selection
+
+   **Score: 5/5**
+
+### Topic Score: 12 / 15 (80%)
 
 ---
 
