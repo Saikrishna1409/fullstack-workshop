@@ -1,60 +1,84 @@
 # Review: 09-mysql
 
 **Exercise:**  Exercise: E-Commerce Database Design and Queries
-**Review Date:** 2025-12-31 09:36
+**Review Date:** 2025-12-31 10:51
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 4
+**Files submitted:** 3
 
-### Code Review
+### Relevance Check
 
-📄 **department-stats.sql**
-   Path: `09-mysql/challenges/department-stats.sql`
-   Lines: 8
+❌ **Submission does NOT match exercise requirements**
+   Expected keywords: customer product category order ecommerce schema queries
+   Found only: order 
+   **Please review the exercise requirements and resubmit**
 
-    - ✅ Contains 1 SELECT statement(s)
-    - 💡 Consider using JOINs for related data
-    - ✅ Uses aggregate functions
-    - ✅ Uses GROUP BY for aggregation
-    - ✅ Uses explicit column selection
+### ⚠️ Review Skipped
 
-   **Score: 4/5**
+The submission does not appear to match the exercise requirements.
+Please complete the correct exercise and resubmit.
 
-📄 **employee-hierarchy.sql**
-   Path: `09-mysql/challenges/employee-hierarchy.sql`
-   Lines: 6
-
-    - ✅ Contains 1 SELECT statement(s)
-    - ✅ Uses JOIN operations
-    - 💡 Consider using aggregate functions (COUNT, SUM, etc.)
-    - ✅ Uses explicit column selection
-
-   **Score: 3/5**
-
-📄 **project-workload.sql**
-   Path: `09-mysql/challenges/project-workload.sql`
-   Lines: 9
-
-    - ✅ Contains 1 SELECT statement(s)
-    - ✅ Uses JOIN operations
-    - ✅ Uses aggregate functions
-    - ✅ Uses GROUP BY for aggregation
-    - ✅ Uses explicit column selection
-
-   **Score: 5/5**
-
-### Topic Score: 12 / 15 (80%)
+### Topic Score: 0 / 100 (0%)
 
 ---
 
 ## Challenge
 
-**Status:** ⚠️ Not submitted
+**Status:** ✅ Submitted (3 files)
 
-Submit to: `09-mysql/challenge-01/`
+### Challenge Relevance Check
+
+✅ Submission appears relevant to the exercise
+   Found keywords: employee department salary project assignment 
+
+### Challenge Code Review
+
+📄 **department-stats.sql**
+   Lines: 8
+
+    📋 **Challenge 1: Department Stats**
+    Expected: department, employee_count, avg_salary, max_salary
+
+    - ✅ Groups by department
+    - ✅ Counts employees (COUNT(*))
+    - ✅ Calculates average salary
+    - ✅ Finds maximum salary
+    - ✅ Filters departments with >2 employees (HAVING)
+
+   **Score: 5/5**
+
+📄 **employee-hierarchy.sql**
+   Lines: 6
+
+    📋 **Challenge 2: Employee Hierarchy**
+    Expected: employee_name, manager_name (self-join)
+
+    - ❌ Missing self-join on employees table
+    - ✅ Uses LEFT JOIN (handles employees without managers)
+    - ✅ Joins on manager_id = id
+    - ✅ Uses table aliases
+
+   **Score: 3/4**
+
+📄 **project-workload.sql**
+   Lines: 9
+
+    📋 **Challenge 3: Project Workload**
+    Expected: project_name, budget, team_size, total_hours
+
+    - ✅ Joins projects with assignments
+    - ✅ Counts team members
+    - ✅ Sums allocated hours
+    - ✅ Filters budget > 50000
+    - ✅ Orders by total hours descending
+
+   **Score: 5/5**
+
+### Challenge Score: 13 / 14 (92%)
+
 
 ---
 
