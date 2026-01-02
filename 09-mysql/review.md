@@ -1,23 +1,84 @@
 # Review: 09-mysql
 
 **Exercise:**  Exercise: E-Commerce Database Design and Queries
-**Review Date:** 2025-12-30 15:25
+**Review Date:** 2025-12-31 10:51
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 1
+**Files submitted:** 3
 
-### Code Review
+### Relevance Check
+
+❌ **Submission does NOT match exercise requirements**
+   Expected keywords: customer product category order ecommerce schema queries
+   Found only: order 
+   **Please review the exercise requirements and resubmit**
+
+### ⚠️ Review Skipped
+
+The submission does not appear to match the exercise requirements.
+Please complete the correct exercise and resubmit.
+
+### Topic Score: 0 / 100 (0%)
 
 ---
 
 ## Challenge
 
-**Status:** ⚠️ Not submitted
+**Status:** ✅ Submitted (3 files)
 
-Submit to: `09-mysql/challenge-01/`
+### Challenge Relevance Check
+
+✅ Submission appears relevant to the exercise
+   Found keywords: employee department salary project assignment 
+
+### Challenge Code Review
+
+📄 **department-stats.sql**
+   Lines: 8
+
+    📋 **Challenge 1: Department Stats**
+    Expected: department, employee_count, avg_salary, max_salary
+
+    - ✅ Groups by department
+    - ✅ Counts employees (COUNT(*))
+    - ✅ Calculates average salary
+    - ✅ Finds maximum salary
+    - ✅ Filters departments with >2 employees (HAVING)
+
+   **Score: 5/5**
+
+📄 **employee-hierarchy.sql**
+   Lines: 6
+
+    📋 **Challenge 2: Employee Hierarchy**
+    Expected: employee_name, manager_name (self-join)
+
+    - ❌ Missing self-join on employees table
+    - ✅ Uses LEFT JOIN (handles employees without managers)
+    - ✅ Joins on manager_id = id
+    - ✅ Uses table aliases
+
+   **Score: 3/4**
+
+📄 **project-workload.sql**
+   Lines: 9
+
+    📋 **Challenge 3: Project Workload**
+    Expected: project_name, budget, team_size, total_hours
+
+    - ✅ Joins projects with assignments
+    - ✅ Counts team members
+    - ✅ Sums allocated hours
+    - ✅ Filters budget > 50000
+    - ✅ Orders by total hours descending
+
+   **Score: 5/5**
+
+### Challenge Score: 13 / 14 (92%)
+
 
 ---
 
